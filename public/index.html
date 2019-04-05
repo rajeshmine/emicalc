@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>EMI CALCULATOR</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Equated Monthly Installment</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Navigation</p>
+                <li class="active">
+                    <a href="index.html">EMI Calculator</a>
+                </li>
+               
+               
+            </ul>
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <i class="glyphicon glyphicon-align-justify"></i>
+
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a class="useraccount_firstletter">:)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h3 class="headingtxt">EMI Calculator <small>Finance</small></h3>
+            <div class="pad30">
+                <div class="container-fluid">
+                    <div class="row boxshadow1 bgwhite pad10">
+                        <div class="col-sm-7">
+
+                            <div class="row">
+                                <div class="pad10">
+                                    <p>Loan Amount is <span id="loanamtval">50000</span></p>
+                                    <input class="rangeslider" id="loanamt" type="range" min="100" max="5000000"
+                                        step="100" value="50000" />
+                                </div>
+                                <div class="pad10">
+                                    <p>No. of Year is <span id="yearval">12</span></p>
+                                    <input class="rangeslider" id="year" type="range" min="1" max="360" step="1"
+                                        value="12" />
+                                </div>
+                                <div class="pad10">
+                                    <p>Rate of Interest [ROI] is <span id="roival">11</span></p>
+                                    <input class="rangeslider" id="roi" type="range" min="2.0" max="16.0" step="0.1"
+                                        value="11" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="pad10 textcenter border mar5">
+                                        <p>Monthly EMI</p>
+                                        <p id="monthlyemival">8413.90</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pad10 textcenter border mar5">
+                                        <p>Total Interest</p>
+                                        <p id="totalinterestval">8413.90</p>
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5">
+                            <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="pad30">
+                <div class="container-fluid">                   
+                    <div class="row boxshadow1 bgwhite">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Year</th>
+                                        <th>Opening Balance</th>
+                                        <th>Total EMI Amount</th>
+                                       
+                                        <th>Principal Paid Amount</th>
+                                        <th>Interest Per Month</th>
+                                        <th>Closing Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="emitable">
+                                    
+                                    
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+
+</body>
+
+</html>
